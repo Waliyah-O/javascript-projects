@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-area">
+            <input class="text-input" id="screen" type="text" readonly placeholder="0">
+        </div>
+
+        <div class="calculator-body">
+            <button class="orange-red" onclick="clearOne()" id="clearOne">DEL</button>
+            <button class="purple" onclick="displayValue('/')" id="division">&#247;</button>
+            <button class="purple" onclick="displayValue('*')" id="multiplication">&#215;</button>
+            <button class="orange-red" onclick="clearAll()" id="clear">C</button>
+            <button id="seven" onclick="displayValue('7')"> 7</button>
+            <button id="eight" onclick="displayValue('8')">8</button>
+            <button id="nine" onclick="displayValue('9')">9</button>
+            <button class="purple" onclick="displayValue('-')" id="minus">-</button>
+            <button id="four" onclick="displayValue('4')">4</button>
+            <button id="five" onclick="displayValue('5')">5</button>
+            <button id="six" onclick="displayValue('6')">6</button>
+            <button class="purple" onclick="displayValue('+')" id="plus">+</button>
+            <button id="one" onclick="displayValue('1')">1</button>
+            <button id="two" onclick="displayValue('2')">2</button>
+            <button id="three" onclick="displayValue('3')">3</button> 
+           
+            <button class="purple" onclick="displayValue('%')" id="modulus">%</button>
+            <button id="zero" onclick="displayValue('0')">0</button>
+            <button class="orange-red" onclick="displayValue('&#8317;')" id="bracketOpen">&#8317;</button>
+            <button class="orange-red" onclick="displayValue('&#8318;')" id="bracketClosed">&#8318;</button>
+            <button class="equals" onclick="ISequalTo()" id="equalTo">=</button>
+            <button id="pi" onclick="displayValue('x²')">x²</button>
+            <button id="point" onclick="displayValue('.')">.</button>
+            <button id="squareRoot" onclick="displayValue('&#8730;')">&#8730;</button>
+             
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
