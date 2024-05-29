@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch</title>
+  <style>
+
+	body{
+		display: grid;
+		place-items: center;
+	}
+    .stopwatch {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .timer {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .button {
+      width: 100px;
+      height: 50px;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="stopwatch">
+    <div class="timer"></div>
+    <div class="buttons">
+      <button class="button" id="start">Start</button>
+      <button class="button" id="stop">Stop</button>
+      <button class="button" id="reset">Reset</button>
+    </div>
+  </div>
+
+  <script>
+    var start = Date.now();
+    var timer = document.querySelector(".timer");
+    var startButton = document.querySelector("#start");
+    var stopButton = document.querySelector("#stop");
+    var resetButton = document.querySelector("#reset");
+
+    startButton.addEventListener("click", function() {
+      start = Date.now();
+    });
+
+    stopButton.addEventListener("click", function() {
+      var end = Date.now();
+      var elapsed = end - start;
+      timer.innerHTML = elapsed;
+    });
+
+    resetButton.addEventListener("click", function() {
+      timer.innerHTML = "0";
+    });
+  </script>
+</body>
+</html>
