@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>swap</title>
+    <style>
+      .wrapper {
+        margin-top: 2em;
+        display: flex;
+        gap: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="firstContainer">
+        <img src="../images/pinkflower.jpg" alt="" />
+      </div>
+      <div id="secondContainer">
+        <img src="../images/flowerpot.jpg" alt="" id="img2" />
+      </div>
+    </div>
+    <button id="swap">Swap</button>
+    <button><a href="../index.html">Previous</a></button>
+    <button><a href="/pages/random.html">Next</a></button>
+    <script>
+      //   let firstContainer = document.getElementById("firstContainer");
+      let secondContainer = document.getElementById("secondContainer");
+      let img = document.querySelector("img");
+      let img2 = document.getElementById("img2");
+      let swap = document.getElementById("swap");
+
+      function swapBg() {
+        let newImg = img.src;
+        let secImg = img2.src;
+        img2.src = newImg;
+        img.src = secImg;
+        // console.log(secImg);
+      }
+
+      swap.addEventListener("click", swapBg);
+
+      //   secondContainer.addEventListener("click", () => {
+      // 	let newImg = img.src
+      // 	console.log(newImg);
+      // 	img2.src = newImg
+      // 	img.src = ''
+      // 	// secondContainer.append(newImg)
+
+      //     // console.log(newImg);
+      //   });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: auto;
+      }
+      .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        margin-top: 1em;
+        border: 2px groove black;
+        font-size: 1.5rem;
+      }
+
+      button {
+        margin-top: 1em;
+        width: 300px;
+        padding: 10px;
+        font-size: 1em;
+        font-weight: 500;
+        border-radius: 4px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      #textDiv {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div id="textDiv">
+          <p class="text">H</p>
+          <p class="text">e</p>
+          <p class="text">l</p>
+          <p class="text">l</p>
+          <p class="text">o</p>
+        </div>
+        <input id="theInput" type="text" />
+        <button id="checkBtn">check text</button>
+        <button><a href="./pages/memory/memory.html">Previous</a></button>
+        <button><a href="../../move.html">Next</a></button>
+      </div>
+    </div>
+
+    <script>
+      let letters = document.querySelectorAll(".text");
+      let theInput = document.getElementById("theInput");
+
+      theInput.addEventListener("input", () => {
+        letters.forEach((letter, index) => {
+          letters[index].style.color = "black";
+          if (theInput.value[index] === letter.innerText) {
+            // console.log(true);
+            letters[index].style.color = "red";
+          }
+        });
+      });
+
+      const obj = {
+        1: 3,
+        2: {
+          foo: 3,
+        },
+        3: {
+          bar: 3,
+        },
+        4: {
+          baz: 3,
+        },
+        5: 'foo',
+      };
+      console.log(obj.hasOwnProperty('foo'));
+    </script>
+  </body>
+</html>

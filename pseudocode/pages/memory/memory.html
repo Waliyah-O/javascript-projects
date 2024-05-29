@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: grid;
+        place-items: center;
+      }
+
+      .wrapper {
+        margin-top: 2em;
+        display: flex;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+      .boxes {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        overflow: hidden;
+      }
+      button {
+        margin-top: 1em;
+        width: 300px;
+        padding: 10px;
+        font-size: 1em;
+        font-weight: 500;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="boxes">
+          <img src="../../images/1.jpg" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+        <div class="boxes">
+          <img src="" alt="" class="images" />
+        </div>
+      </div>
+      <button id="scrambleBtn">Scramble</button>
+      <button><a href="./.html">Previous</a></button>
+      <button><a href="../../move.html">Next</a></button>
+    </div>
+
+    <script src="memory.js"></script>
+  </body>
+</html>

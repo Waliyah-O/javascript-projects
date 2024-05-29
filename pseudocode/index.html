@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <p id="anotherText"></p>
+    <input id="inputText" type="text" />
+    <button id="changeBgColor">Change</button>
+    <button id="changeBgColor"><a href="./pages/backgroundSwap.html">Next</a></button>
+
+    <script>
+      let container = document.querySelector(".container");
+      let inputText = document.getElementById("inputText");
+      let changeBgColor = document.getElementById("changeBgColor");
+      let anotherText = document.getElementById("anotherText");
+
+      let textInput;
+
+      inputText.addEventListener("input", (e) => {
+        textInput = inputText.value;
+        // console.log(textInput);
+      });
+
+      let changeStyle = () => {
+        container.style.backgroundColor = textInput;
+        // body.style.backgroundColor = textInput;
+        anotherText.style.color = textInput;
+        anotherText.innerText = textInput;
+        changeBgColor.style.borderRadius = textInput;
+        container.style.borderRadius = textInput;
+      };
+      changeBgColor.addEventListener("click", changeStyle);
+    </script>
+
+    <!-- <script>
+      let container = document.querySelector(".container");
+      let changeBgCOlor = document.getElementById("changeBgCOlor");
+      let inputText = document.getElementById("inputText");
+
+      let textInput;
+
+      inputText.addEventListener("input", (e) => {
+		 textInput = inputText.value;
+        console.log(e.target.value);
+      });
+
+      let changeColor = () => {
+		// console.log(textInput);
+        container.style.backgroundColor = textInput;
+      };
+
+      changeBgCOlor.addEventListener("click", changeColor);
+    </script> -->
+  </body>
+</html>
