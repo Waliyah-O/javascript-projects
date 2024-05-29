@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js</title>
+    <!-- <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Putting the script in the head tag"
+        }
+    </script> -->
+  </head>
+  <body>
+    <main>
+      <!-- ***************JAVASCRIPT IN HEAD***********-->
+      <!-- <h1 id="demo">Demo</h1>
+      <button onclick="myFunction()" >Change Heading</button> -->
+
+      <!-- **********DOM MANIPULATION************ -->
+
+      <!-- <button onclick="document.getElementById('demo').style.display ='none'">
+        Hide me
+      </button>
+      <button onclick="document.getElementById('demo').style.display ='block'">
+        Show me
+      </button> -->
+      <button onclick="document.getElementById('myImage').src='light-on.png'">
+        Turn on the light
+      </button>
+
+      <img id="myImage" src="light-off.png" alt="" style="width: 100px" />
+      <button onclick="document.getElementById('myImage').src='light-off.png'">
+        Turn off the light
+      </button>
+
+      <!-- *******JAVASCRIPT IN <BODY> ************* -->
+      <!-- <p id="demo">A paragraph</p>
+        <button type="button" onclick="myFunction()">Change </button> -->
+      <!-- <script>
+            function myFunction() {
+                document.getElementById("demo").innerHTML = "Paragraph changed!"
+            }
+        </script> -->
+
+      <!-- ********** USING innerHtml******** -->
+      <!-- <h1>My First Web Page </h1>
+        <p>My First Web Paragraph </p>
+
+        <p id="demo"></p>
+
+        <script>
+            document.getElementById("demo").innerHTML = 5 +6
+        </script> -->
+
+      <!-- ********** USING document.write******** -->
+      <!-- <h1>My First Web Page</h1>
+      <p>My First Web Paragraph</p>
+
+      <p id="demo">Paragraph</p> -->
+      <!-- <script>
+        document.write(5 + 6)
+      </script> -->
+      <!-- // using document.write() after an HTML document is loaded, will DELETE ALL EXISTING HTML -->
+      <!-- <button onclick="document.write(5 +6)" >write</button> -->
+
+      <!-- ********** USING window.alert ******** -->
+      <!--  you can skip the window keyword -->
+      <!-- <button onclick="alertFunc()">Change</button>
+      <script>
+        function alertFunc() {
+          window.alert(5 + 6);
+        }
+        // document.write(5 + 6)
+        // window.alert(5 +6)
+      </script> -->
+
+      <!-- *******USING console.log ************* -->
+      <!-- <script>
+        console.log(5 + 6);
+      </script> -->
+
+      
+    </main>
+  </body>
+  <!-- *******JAVASCRIPT AFTER <BODY> ************* -->
+  <!-- <script>
+    document.getElementById("demo").innerHTML = "My first Javascript"
+  </script> -->
+  <!-- *****JAVASCRIPT EXTERNAL FILE********** -->
+  <script src="script.js"></script>
+</html>
